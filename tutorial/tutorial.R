@@ -2,8 +2,9 @@ rm(list=ls())
 
 packagePath <- "path/to/COOBoostRpackage/"
 
-devtools::install(packagePath)
-
+setwd(packagePath)
+devtools::install()
+library("COOBoostR")
 
 sourcePath <- "path/to/tutorial_data/"
 resultsPath <- "path/to/results/" 
