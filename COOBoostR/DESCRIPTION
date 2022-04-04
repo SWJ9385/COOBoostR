@@ -1,0 +1,16 @@
+Package: COOBoostR
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Author: Who wrote it
+Maintainer: WooJeung Song <tptt1212@gmail.com>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: GPL
+Encoding: UTF-8
+Depends: R (>= 3.5.1)
+Imports: 
+  xgboost,
+  stringr
+LazyData: true
+RoxygenNote: 7.1.2
