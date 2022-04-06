@@ -1,8 +1,11 @@
 Package: COOBoostR
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
+Title: COOBoost: an extreme gradient boosting-based tool for robust tissue or cell-of-origin prediction of tumors 
+Version: 1.0.0
+Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre")),
+  person("First", "Last", email = "first.last@example.com", role = c("aut", "cre")),
+  person("First", "Last", email = "first.last@example.com", role = c("aut", "cre")),
+  person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
 Maintainer: WooJeung Song <tptt1212@gmail.com>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
