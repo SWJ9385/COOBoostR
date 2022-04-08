@@ -10,8 +10,11 @@ COOBoostR: An extreme gradient boosting-based tool for robust tissue or cell-of-
 ### preprocess 
 
 #### 1MB 
+
 collect somatic mutation density by 1 Mega base pairs(Mbp) with bedtools(https://bedtools.readthedocs.io/en/latest/).
+
 bedtools intersect -a megabase_map -b input_bedfile -c > output
+
 --------------------------------
 ## Development Environment
 
