@@ -1,9 +1,12 @@
 # COOBoostR
 COOBoostR: An extreme gradient boosting-based tool for robust tissue or cell-of-origin prediction of tumors by R
 ## Input Data Description
+
+#### mutation data
 1. COO_epimarker.csv(4*1915)
 4 columns (Barrett, Gastric, Ileum, Squamous)
 
+#### epigenetic marker data
 2. COO_mutation.csv(2*1915)
 2 samples (BA and EAC)
 
@@ -11,7 +14,8 @@ COOBoostR: An extreme gradient boosting-based tool for robust tissue or cell-of-
 
 #### 1MB 
 
-collect somatic mutation density by 1 Mega base pairs(Mbp) with bedtools(https://bedtools.readthedocs.io/en/latest/).
+collect mutation and epigenetic marker by 1 Mega base pairs(Mbp) with bedtools(https://bedtools.readthedocs.io/en/latest/).
+COOBoostR/tutorial/1mb_paper.bed
 ```bash
     bedtools intersect -a megabase_map -b input_bedfile -c > output
 ```
@@ -36,6 +40,7 @@ collect somatic mutation density by 1 Mega base pairs(Mbp) with bedtools(https:/
     version.string R version 3.5.1 (2018-07-02)
 ```
 - Executable Operating System(OS) : Linux(e.g Ubuntu)
+- COOBoostR imports R package xgboost and stringr 
 --------------------------------
 ## Final Output description
 
