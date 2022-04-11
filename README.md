@@ -47,18 +47,25 @@ COOBoostR/tutorial/1mb_paper.bed
 ```R 
 rm(list=ls())
 
+# Set the working directory as COOBoostR/COOBoostR/ for package installation.
 packagePath <- "path/to/COOBoostRpackage/"
-
 setwd(packagePath)
+
+# Installing packages using devtools and load COOBoostR.
 devtools::install()
 library("COOBoostR")
 
+# sourcePath : Directory with data needed for analysis(epimarker, mutation).
 sourcePath <- "path/to/tutorial_data/"
+# resultsPath : The directory where the results will be saved after analysis. 
 resultsPath <- "path/to/results/" 
+
+# Data generated through 1mb preprocessing. Requires csv format.(You need a csv file name, not a data frame or variable.)
 epimarker <- "COO_epimarker.csv"
 mutation <- "COO_mutation.csv"
 
-COOBoostR(sourcePath = sourcePath, resultPath = resultPath ,epimarker_rawdata = epimarker_rawdata , mutation_rawdata = mutation_rawdata, mEta = 0.01, mdepth = 2)
+# Analysis with COOBoostR
+COOBoostR(sourcePath = sourcePath, resultPath = resultPath ,epimarker_rawdata = epimarker , mutation_rawdata = mutation, mEta = 0.01, mdepth = 2)
 ```
 --------------------------------
 ## Final Output description
