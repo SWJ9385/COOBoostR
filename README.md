@@ -1,5 +1,10 @@
 # COOBoostR
 COOBoostR: An extreme gradient boosting-based tool for robust tissue or cell-of-origin prediction of tumors by R
+
+![GitHub_figure re scaled](https://user-images.githubusercontent.com/85658413/167326301-b9246775-de95-4662-96d3-89a22d0d9048.svg)
+
+
+
 ## Input Data Description
 
 #### mutation data
