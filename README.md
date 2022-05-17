@@ -26,7 +26,7 @@ COOBoostR accepts the regional mutation density estimated in 1 Mbp window size. 
 COOBoostR/tutorial/1mb_paper.bed
 
 ```bash
-    bedtools intersect -a 1mb_paper.bed -b input_vcffile -c > output.bed 
+bedtools intersect -a 1mb_paper.bed -b input_vcffile -c > output.bed 
 ```
 
 The  1mb_paper.bed file we put in the tutorial folder contains an autosomal genomic coordinates divided into 1 Mbp window according to human genome reference 19 version, based on this, it is possible to measure the frequency of mutations in the user's input vcf file. However, since the method using bedtools can handle only one vcf file, it is cumbersome to process vcf files of multiple samples. So, we are supporting this pre-processing function in COOBoostR to perform 1 Mbp window counting for all vcf files at a time, and to create a unified mutation matrix. Users only need to collect vcf files in one folder and perform the following functions.
@@ -42,7 +42,7 @@ The  training data set we prepared as a tutorial is a virtual random value of hu
 ## Development Environment
  
 - Language : R script
-“{- Integrated Development Environment : Rstudio
+- Integrated Development Environment : Rstudio
 ```bash
     platform       x86_64-apple-darwin15.6.0   
     arch           x86_64                      
