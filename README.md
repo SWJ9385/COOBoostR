@@ -90,7 +90,7 @@ COOBoostR(sourcePath = sourcePath, resultPath = resultPath ,epimarker_rawdata = 
 ## Final Output description
 Once the matrix is completed through the preparation process of input data, TOO/COO prediction for each sample is possible through COOBoostR. The output from COOBoostR is one csv file that summarizes the results of all the samples, and there are several txt file groups that contain log data such as evaluation score.
 
-#Summary output
+### Summary output
 
 Summary output is integrated TOO/COO prediction results for the test samples. It is like a synthesis of the results for the three types (Barret’s esophagus, Esophageal adenocarcinoma, Esophageal squamous cell carcinoma) presented in the tutorial. If the user is not interested in the detailed log information of COOBoost, it is okay to check only this file. 
 
@@ -100,7 +100,7 @@ In the summary output, training features up to 10th place are recorded. These 10
 
  
 
-# Multiple log files 
+## Multiple log files 
 
 COOBoostR provides four types of original log files that occur during the TOO/COO prediction process. The log file includes basic operation information of the algorithm beyond the TOO/COO Summary output result, so it is possible to collect files if the user wants. 
 
