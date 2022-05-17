@@ -87,7 +87,31 @@ COOBoostR(sourcePath = sourcePath, resultPath = resultPath ,epimarker_rawdata = 
 ```
 --------------------------------
 
-## Final Output descriptio n
-Once the matrix is completed through the preparation process of input data, TOO/COO prediction for each sample is possible through COOBoostR. The output from COOBoostR is one csv file that summarizes the results of all the samples, and there are several txt file groups that contain log data such as evaluation score .
+## Final Output description
+Once the matrix is completed through the preparation process of input data, TOO/COO prediction for each sample is possible through COOBoostR. The output from COOBoostR is one csv file that summarizes the results of all the samples, and there are several txt file groups that contain log data such as evaluation score.
 
+#Summary output
 
+Summary output is integrated TOO/COO prediction results for the test samples. It is like a synthesis of the results for the three types (Barret’s esophagus, Esophageal adenocarcinoma, Esophageal squamous cell carcinoma) presented in the tutorial. If the user is not interested in the detailed log information of COOBoost, it is okay to check only this file. 
+
+If you look at the tutorial analysis results, the TOO/COO prediction results for the three types are arranged in order. Rank 1 - The type of training features can be interpreted as the type predicted TOO/COO. That is, TOO of Barrett's esophaugs is gastric, and TOO of esophageal adenocarcinoma is also gastric, but in the case of Esophageal squamous cell carcinoma, esophaugs can be interpreted as TOO. 
+
+In the summary output, training features up to 10th place are recorded. These 10 rankings were determined by removing the features that obtained low scores one by one from the rank 20 training features (backward eliminiation). The summary output also includes information on the probability that training features are predicted to be TOO in each step of the iterative test. Looking at the example of Barrett's esophagus, it means that the gastric feature was predicted as TOO with a 57% probability when the last two training features were left. 
+
+ 
+
+# Multiple log files 
+
+COOBoostR provides four types of original log files that occur during the TOO/COO prediction process. The log file includes basic operation information of the algorithm beyond the TOO/COO Summary output result, so it is possible to collect files if the user wants. 
+
+ 
+
+"evalLog_****" - model training log file 
+
+It is a log file that collects training and test error values from repeated tests. If you check the train and test error values of the tutorial data, you can see that abnormally high values are recorded. This is a phenomenon that occurs because the method of COOBoostR operates differently from the calculation of this error value. Generally, the XGBoost algorithm learns from a large number of samples and measures the error rate based on the model. In the case of COOBoostR, 1 Mbp region selection, not sample selection, works in the same way as predicting TOO/COO with the preceding random-forest based algorithm (PMID: 25693567). In more detail, when the training and test matrices come into COOBoostR as inputs, the 2,128 regions are randomly divided in a 9:1 ratio, and the error rate of the tree model is measured in this form. This is a characteristic of the TOO/COO prediction algorithm that defines one specific type rather than repeatedly configuring the same cell type when constructing the training matrix, which is not suitable for evaluation of the existing XGBoost algorithm. 
+
+"output_****_extract" - ordered feature list after back-elimination Simply you need to use and identify this output result 
+
+"rank_****" - feature importance sets while training models It is possible to change feature count due to back-elimination 
+
+"time_****" - you can check execution time using not only whole features but also back-elimination feature list 
