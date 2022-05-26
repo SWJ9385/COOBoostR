@@ -9,7 +9,7 @@ Authors@R: c(person("Kyungsik", "Ha", email = "first.last@example.com", role = "
 Maintainer: WooJeung Song <tptt1212@gmail.com>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
-License: GPL3.0
+License: GPL (>=3)
 Encoding: UTF-8
 Depends: R (>= 3.5.1)
 Imports: 
