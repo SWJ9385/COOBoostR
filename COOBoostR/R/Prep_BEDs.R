@@ -6,13 +6,13 @@
 #' @param resultpath results path
 #' @param mb1_path mb1 file path
 #' @param BED_form bed4 or bed5, default = "bed4"
-#' @param BED_sep bed file separator, default = ","
+#' @param BED_sep bed file separator, default = "\t"
 #' @param BED_header bed file header, default = F
 #'
 #' Prep_BEDs(BED_path, resultpath, mb1_path, BED_form, BED_sep, BED_header)
 #' @export
 
-Prep_BEDs <- function(BED_path, resultpath, mb1_path, BED_sep = ",", BED_header = F, BED_form = "bed4"){
+Prep_BEDs <- function(BED_path, resultpath, mb1_path, BED_sep = "\t", BED_header = F, BED_form = "bed4"){
   
   file_list <- list.files(BED_path)
   
