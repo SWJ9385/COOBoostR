@@ -6,7 +6,7 @@
 #' @param resultpath results path
 #' @param mb1_path mb1 file path
 #' @param BED_form bed4 or bed5, default = "bed4"
-#' @param BED_sep bed file separator, default = "\t"
+#' @param BED_sep bed file separator, default = tap
 #' @param BED_header bed file header, default = F
 #'
 #' Prep_BEDs(BED_path, resultpath, mb1_path, BED_form, BED_sep, BED_header)
