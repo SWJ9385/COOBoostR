@@ -11,4 +11,6 @@ resultsPath <- "path/to/results/"
 epimarker <- "COO_epimarker.csv"
 mutation <- "COO_mutation.csv"
 
+set.seed(1708)
+
 COOBoostR(sourcePath = sourcePath, resultPath = resultPath ,epimarker_rawdata = epimarker_rawdata , mutation_rawdata = mutation_rawdata, mEta = 0.01, mdepth = 2)
