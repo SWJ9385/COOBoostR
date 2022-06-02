@@ -77,6 +77,7 @@ rm(list=ls())
 # Set the working directory as COOBoostR/COOBoostR/ for package installation.
 packagePath <- "path/to/COOBoostRpackage/"
 setwd(packagePath)
+set.seed(1708)
  
 # Installing packages using devtools and load COOBoostR.
 devtools::install()
