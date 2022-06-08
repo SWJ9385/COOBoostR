@@ -21,6 +21,7 @@ Prep_BEDs <- function(BED_path, resultpath, mb1_path, BED_sep = "\t", BED_header
     for (j in file_list){
       
       BED_file <- read.csv(paste0(BED_path, j),sep = BED_sep, header = BED_header)
+      BED_file[,1] <- paste0("chr", as.numeric(gsub("\\D","",BED_file[,1])))
       mb1 <- read.csv(paste0(mb1_path),sep = "\t", header = F)
       mb1$V5 <- 0 
       
@@ -52,6 +53,7 @@ Prep_BEDs <- function(BED_path, resultpath, mb1_path, BED_sep = "\t", BED_header
       for (j in file_list){
         
         BED_file <- read.csv(paste0(BED_path, j),sep = BED_sep,header = BED_header)
+        BED_file[,1] <- paste0("chr", as.numeric(gsub("\\D","",BED_file[,1])))
         mb1 <- read.csv(paste0(mb1_path),sep = "\t",header = F)
         mb1$V5 <- 0 
         
