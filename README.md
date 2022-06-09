@@ -72,6 +72,20 @@ The training data set we prepared as a tutorial is a virtual random value of hum
 --------------------------------
 ## Tutorial
  
+### 1. VCF file to test matrix
+
+```R 
+# VCF_path : The location of the VCF files, and it must end with a delimiter (/).
+VCF_path <- "path/to/VCF_files/"
+# resultsPath : The directory where the results will be saved after analysis. Must end with a delimiter (/).
+resultpath <- "path/to/result_files/"
+# mb1_path : The location of 1mb_paper.bed
+mb1_path <- "path/to/1mb_paper.bed"
+# VCF_sep 
+```
+
+### 2. 
+
 ```R 
 rm(list=ls())
  
@@ -84,9 +98,9 @@ set.seed(1708)
 devtools::install()
 library("COOBoostR")
  
-# sourcePath : Directory with data needed for analysis(epimarker, mutation).
+# sourcePath : Directory with data needed for analysis(epimarker, mutation). Must end with a delimiter (/).
 sourcePath <- "path/to/tutorial_data/"
-# resultsPath : The directory where the results will be saved after analysis. 
+# resultsPath : The directory where the results will be saved after analysis. Must end with a delimiter (/).
 resultsPath <- "path/to/results/" 
  
 # Data generated through 1mb preprocessing. Requires csv format.(You need a csv file name, not a data frame or variable.)
