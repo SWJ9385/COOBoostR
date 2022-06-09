@@ -5,8 +5,8 @@
 #' @param VCF_path VCF file path
 #' @param resultpath results path
 #' @param mb1_path mb1 file path
-#' @param VCF_sep bed file separator, default = tap
-#' @param VCF_header bed file header, default = F
+#' @param VCF_sep VCF file separator, default = tap
+#' @param VCF_header VCF file header, default = F
 #'
 #' Prep_VCFs(VCF_path, resultpath, mb1_path, VCF_sep, VCF_header)
 #' @export
