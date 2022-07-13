@@ -108,7 +108,7 @@ Prep_BEDs(BED_path, resultpath, mb1_path, BED_sep = ",", BED_header = F, BED_for
 ```R 
 rm(list=ls())
  
-# Set the working directory as COOBoostR/COOBoostR/ for package installation.
+# Set the working directory as COOBoostR-main/COOBoostR/ for package installation.
 packagePath <- "path/to/COOBoostRpackage/"
 setwd(packagePath)
 set.seed(1708)
