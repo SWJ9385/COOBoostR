@@ -127,7 +127,7 @@ epimarker <- "COO_epimarker.csv"
 mutation <- "COO_mutation.csv"
  
 # Analysis with COOBoostR
-COOBoostR(sourcePath = sourcePath, resultPath = resultPath ,epimarker_rawdata = epimarker , mutation_rawdata = mutation, mEta = 0.01, mdepth = 2)
+COOBoostR(sourcePath = sourcePath, resultPath = resultsPath ,epimarker_rawdata = epimarker , mutation_rawdata = mutation, mEta = 0.01, mdepth = 2)
 ```
 --------------------------------
 
