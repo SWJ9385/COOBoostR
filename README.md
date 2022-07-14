@@ -75,7 +75,7 @@ The training data set we prepared as a tutorial is a virtual random value of hum
 
 ### Expected time
 
-pecs used    
+Specs used    
 OS : windows 10   
 CPU : Intel(R) Core(TM) i5-1035G7 CPU @ 1.20GHz 1.50 GHz    
 RAM : 16GB    
