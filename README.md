@@ -67,7 +67,7 @@ The training data set we prepared as a tutorial is a virtual random value of hum
     version.string R version 4.1.2 (2021-11-01)
     nickname       Bird Hippie  
 ```
-- Executable Operating System(OS) : Linux(e.g Ubuntu)
+- Executable Operating System(OS) : Linux(e.g Ubuntu), windows 10
 - COOBoostR imports R package xgboost(1.5.2.1) and stringr(1.4.0)
 --------------------------------
 
