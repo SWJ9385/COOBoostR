@@ -12,7 +12,7 @@ COOBoostR receives two sets of data (training dataset and test dataset) as input
 In COOBoostR, vcf file format is suitable as the test dataset with the somatic mutation calling process completed. Before executing COOBoostR, the user must go through three verification processes. If the input vcf file is not suitable for COOBoostR, it is necessary to modify the vcf file through the following vcf preprocessing process. 
 
 Insertion deletion(INDEL) remove 
-When performing mutation calling, some programs extract mutations including INDELs. Since the COOBoostR algorithm operates based on somatic point mutation profiles, INDEL information needs to be removed prior to the COOBoostR running. A program that can be used for this is vcftools (http://vcftools.sourceforge.net/), and you can use the following command to remove INDEL from your vcf file.
+When performing mutation calling, some programs extract mutations including INDELs. Since the COOBoostR algorithm operates based on somatic point mutation profiles, INDEL information needs to be removed prior to the COOBoostR running. A program that can be used for this is vcftools(0.1.16) (http://vcftools.sourceforge.net/), and you can use the following command to remove INDEL from your vcf file.
 
 ```bash
 vcftools --vcf input.vcf --recode --remove-indels --out output.vcf 
@@ -22,13 +22,13 @@ Reference mapping
 COOBoostR algorithm undergoes somatic mutation data processing for the input vcf files by calculating somatic mutation frequencies in units of 1 Mbp window. For accurate analysis, the human reference genome embedded in the algorithm should be matched to the input vcf files to avoid errors. Since the 1 Mbp window conversion is set based on the hg19/GRch37 human genome reference, liftover is necessary if the vcf file you have is not the hg19 version. For this process, you can use the CrossMap tool (http://crossmap.sourceforge.net) to modify the vcf file(s) to hg19 version by using the chain file that matches the reference version used in the mutation calling process.
 
 Chromosome notation  
-In the VCF file, mutation genomic coordinates are listed from the chromosome number. However, depending on the type of VCF file, there are cases where the chromosome number is written only as numbers like 1,2,3.., and there are cases where ‘chr’ is additionally attached like chr1, chr2, chr3. In order to perform mutation counting in units of 1 Mbp window in the somatic mutation vcf file, this notation must be unified. If there is no notation of 'chr' in the user's input vcf file, the vcf file can be modified with the following simple perl command. (The 1megabase region we use is marked with 'chr' notation) 
+In the VCF file, mutation genomic coordinates are listed from the chromosome number. However, depending on the type of VCF file, there are cases where the chromosome number is written only as numbers like 1,2,3.., and there are cases where ‘chr’ is additionally attached like chr1, chr2, chr3. In order to perform mutation counting in units of 1 Mbp window in the somatic mutation vcf file, this notation must be unified. If there is no notation of 'chr' in the user's input vcf file, the vcf file can be modified with the following simple perl(v5.30.0) command. (The 1megabase region we use is marked with 'chr' notation) 
 
  ```bash
 perl -pe 's/^([^#])/chr\1/' input.vcf > output.vcf 
 ```
 
-COOBoostR accepts the regional mutation density calculated in 1 Mbp window size. This 1Mbp window size was frequently used on related publications from different groups. Polak et al (PMID: 25693567) used 1 Mbp window in their entire paper, including random forest algorithm-based feature selection and other analyses. In the case of Schuster-Bockler et al (PMID: 22820252), they also used 1 Mbp window for their core analyses on assessing the correlation between cancer SNVs and different chromatin levels. Calculating the frequency of  mutations in 1 Mbp window from the user input vcf file is performed by using bedtools  (https://bedtools.readthedocs.io/en/latest/) and the 1 Mbp genomic coordinates file that we have uploaded to the tutorial folder (1mb_paper.bed). 
+COOBoostR accepts the regional mutation density calculated in 1 Mbp window size. This 1Mbp window size was frequently used on related publications from different groups. Polak et al (PMID: 25693567) used 1 Mbp window in their entire paper, including random forest algorithm-based feature selection and other analyses. In the case of Schuster-Bockler et al (PMID: 22820252), they also used 1 Mbp window for their core analyses on assessing the correlation between cancer SNVs and different chromatin levels. Calculating the frequency of  mutations in 1 Mbp window from the user input vcf file is performed by using bedtools(v2.27.1)  (https://bedtools.readthedocs.io/en/latest/) and the 1 Mbp genomic coordinates file that we have uploaded to the tutorial folder (1mb_paper.bed). 
 
 COOBoostR/tutorial/1mb_paper.bed
 
