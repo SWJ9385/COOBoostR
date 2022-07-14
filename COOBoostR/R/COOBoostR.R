@@ -260,8 +260,8 @@ COOBoostR <- function(sourcePath, resultPath, epimarker_rawdata, mutation_rawdat
  # outlist <- outlist[-c(grep("extract",outlist))]
  # dirlist <- list.files(resultPath)[-c(which(list.files(resultPath) %in% outlist))]
 
-  for (i in dirlist){
-    file.remove(paste0(resultPath,i))
-  }
+#  for (i in dirlist){
+#    file.remove(paste0(resultPath,i))
+#  }
 
 }
