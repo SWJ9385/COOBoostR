@@ -256,9 +256,9 @@ COOBoostR <- function(sourcePath, resultPath, epimarker_rawdata, mutation_rawdat
     }
     capture.output(cat(proc.time() - progSt),file= paste0(resultPath,'top1_time_',mutationName,'_',rp,'rp.txt'),append=TRUE)
   }
-  outlist <- list.files(resultPath,pattern = "output")
-  outlist <- outlist[-c(grep("extract",outlist))]
-  dirlist <- list.files(resultPath)[-c(which(list.files(resultPath) %in% outlist))]
+ # outlist <- list.files(resultPath,pattern = "output")
+ # outlist <- outlist[-c(grep("extract",outlist))]
+ # dirlist <- list.files(resultPath)[-c(which(list.files(resultPath) %in% outlist))]
 
   for (i in dirlist){
     file.remove(paste0(resultPath,i))
