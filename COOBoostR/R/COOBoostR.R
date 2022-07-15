@@ -29,9 +29,9 @@ COOBoostR <- function(sourcePath, resultPath, epimarker_rawdata, mutation_rawdat
 
   #set repeat count.
   #------------------------------------------------------------------
-  nround=7
+  nround = 20
   #------------------------------------------------------------------
-  rp = 7
+  rp = 10
   mEta = mEta #default : 0.3
   obj = "multi:softmax"
   eval_met = "merror"
