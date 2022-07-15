@@ -132,7 +132,7 @@ COOBoostR <- function(sourcePath, resultPath, epimarker_rawdata, mutation_rawdat
     }
     #------------------------------------------------------------------
 
-    #excute external .jar file.
+    #excute writeFile / in COOBoost excute external .jar file.
     #------------------------------------------------------------------
 
     rankdf <- readFile(path = resultPath, top = 20, mutation = colnames(mutation[mutaionIndex]), initJar = "t", bio_colnames = colnames(bio))
@@ -140,7 +140,7 @@ COOBoostR <- function(sourcePath, resultPath, epimarker_rawdata, mutation_rawdat
 
     #------------------------------------------------------------------
 
-    # capture.output(cat(proc.time() - progSt),file= paste0(resultPath,'time_',mutationName,rp,'rp.txt'),append=TRUE)
+    capture.output(cat(proc.time() - progSt),file= paste0(resultPath,'time_',mutationName,rp,'rp.txt'),append=TRUE)
 
 
     #------------------------------------------------------------------------------------------#
