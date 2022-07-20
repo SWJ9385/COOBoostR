@@ -139,7 +139,7 @@ CPU : Intel(R) Core(TM) i5-1035G7 CPU @ 1.20GHz 1.50 GHz
 RAM : 16GB    
 
 Install time : max 24.97 secs / min 9.12 sec / average 15.37 sec    
-Demo run time(3. Run COOBoostR) : max 20.02 mins / 18.47 mins / average 19.26mins
+Demo run time(3. Run COOBoostR) : max 1.36 hours / min 1.19 hours / average 1.29 mins
 
 --------------------------------
 
