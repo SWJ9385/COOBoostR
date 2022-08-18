@@ -5,7 +5,7 @@
 #' @param BED_path bedfile path
 #' @param resultpath results path
 #' @param mb1_path mb1 file path
-#' @param BED_form bed4 or bed5, default = "bed4"
+#' @param BED_form bed4(bed3) or bed5, default = "bed4"
 #' @param BED_sep bed file separator, default = tap
 #' @param BED_header bed file header, default = F
 #'
