@@ -22,7 +22,7 @@ resultpath <- "path/to/result_files/"
 mb1_path <- "path/to/1mb_paper.bed"
 # BED_sep : BED file separator, default = tap
 # BED_heder : BED file header, default = F
-# BED_form : bed4 or bed5, default = "bed4"
+# BED_form : bed4(bed3) or bed5, default = "bed4"
 
 Prep_BEDs(BED_path, resultpath, mb1_path, BED_sep = ",", BED_header = F, BED_form = "bed5")
 
