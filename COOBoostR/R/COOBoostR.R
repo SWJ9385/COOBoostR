@@ -32,12 +32,12 @@ COOBoostR <- function(sourcePath, resultPath, epimarker_rawdata, mutation_rawdat
   nround = 20
   #------------------------------------------------------------------
   rp = 10
-  mEta = mEta #default : 0.3
+  mEta = mEta #default : 0.01
   obj = "multi:softmax"
   eval_met = "merror"
   msubsample = 0.9
   mgamma = 0 # default : 0
-  mdepth = mdepth #max_depth defalu 6
+  mdepth = mdepth #max_depth_default : 2
   featureCnt = 20
 
   mutationPath <- strsplit(mutation_rawdata,'/')
