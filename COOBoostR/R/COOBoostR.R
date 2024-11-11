@@ -11,7 +11,7 @@
 #' COOBoost_main(path, top, mutation, initJar, rp, nround)
 #' @export
 
-COOBoostR <- function(sourcePath, resultPath, epimarker_rawdata, mutation_rawdata, mEta = 0.03, mdepth = 2){
+COOBoostR <- function(sourcePath, resultPath, epimarker_rawdata, mutation_rawdata, mEta = 0.01, mdepth = 2){
 
   #define serveral paths
   #------------------------------------------------------------------
