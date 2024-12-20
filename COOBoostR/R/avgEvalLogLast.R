@@ -22,7 +22,7 @@ avgEvalLogLast <- function(path, top, mutation, initJar, rp, nround){
   Tr <- c()
   Ts <- c()
   for (i in 1:rp){
-    tmpbr <- str_split(string = br[grep("iter",br)+(nround)][i],pattern = "[[:space:]]")[[1]]
+    tmpbr <- str_split(string = br[grep(paste0(nround,":"),br)][i],pattern = "[[:space:]]")[[1]]
     tmpbr <- tmpbr[tmpbr != ""]
     tmpTr <- as.numeric(tmpbr[3])
     tmpTs <- as.numeric(tmpbr[4])
